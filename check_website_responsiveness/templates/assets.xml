@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="website_responsive_testing_tool_assets" name="Website Responsive Testing Tool assets" inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/check_website_responsiveness/static/src/css/style.css"/>
+            <link rel="stylesheet" type="text/scss" href="/check_website_responsiveness/static/src/css/master.css"/>
+        </xpath>
+        <xpath expr="." position="inside">
+                <script type="text/javascript" src="/check_website_responsiveness/static/src/js/responsive_checker.js"/>
+
+                <script type="text/javascript">
+                    var screen_width = 1024;
+                    var screen_height = 600;
+                    var screen_width_temp = 1024;
+                    var screen_height_temp = 600;
+                    var screen_type = 'Desktop';
+                    var screen_scrolling = 'yes';
+                </script>
+        </xpath>
+    </template>
+</odoo>

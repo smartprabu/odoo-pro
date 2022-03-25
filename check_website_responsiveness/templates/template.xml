@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="website_responsive_user_navbar" inherit_id="website.user_navbar" name="Website responsive">
+        <xpath expr="//li[@id='mobile-menu']" position="after">
+            <li class="o_responsive_preview" id="responsive-menu">
+                <a data-toggle="modal" data-target=".modal_responsive" href="#" id="responsive-menu">
+                    <span title="Multi-device preview" role="img" aria-label="Multi-device preview">
+                        <img src="/check_website_responsiveness/static/src/images/icon.png" alt=""/>
+                    </span>
+                </a>
+            </li>
+        </xpath>
+        <xpath expr="//nav[@id='oe_main_menu_navbar']" position="after">
+            <t t-set="is_public_user" t-value="request.env.user._is_public()"/>
+            <t t-if="not is_public_user">
+                <div role="dialog" class="modal fade modal_responsive" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="responsive-header modal-header">
+                                <h1 title="Odoo Website responsive checking tool. Made with ❤️ by Ashish Hirpara ">
+                                    <a href="/">
+                                        <img height="73" src="/check_website_responsiveness/static/src/images/logo.jpg" alt=""/>
+                                    </a>
+                                </h1>
+                                <nav class="responsive-nav">
+                                    <ul>
+                                        <li>
+                                            <a href="/#" class="responsive_top_menu" style="background-color:#c36f24;">
+                                                <img src="/check_website_responsiveness/static/src/images/mobile_icon.png" alt=""/>
+                                            </a>
+                                            <span class="tool">Mobile</span>
+                                            <ul class="sub-menu sub-mobile-size-list">
+                                                <li>
+                                                    <a href="991|brk|568|brk|Mobile Breakpoint 991px">Mobile Breakpoint 991px
+                                                        <span>991 x 568 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="768|brk|360|brk|Mobile Breakpoint 768px">Mobile Breakpoint 768px
+                                                        <span>768 x 360 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="480|brk|896|brk|Mobile Breakpoint 480px">Mobile Breakpoint 480px
+                                                        <span>480 x 896 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="414|brk|896|brk|Mobile Breakpoint 414px">Mobile Breakpoint 414px
+                                                        <span>414 x 896 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|533|brk|Mobile Breakpoint 320px">Mobile Breakpoint 320px
+                                                        <span>320 x 533 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="414|brk|896|brk|Apple iPhone XS Max">Apple iPhone XS Max
+                                                        <span>414 x 896 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="375|brk|812|brk|Apple iPhone XS">Apple iPhone XS
+                                                        <span>375 x 812 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="414|brk|896|brk|Apple iPhone XR">Apple iPhone XR
+                                                        <span>414 x 896 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="375|brk|812|brk|Apple iPhone X">Apple iPhone X
+                                                        <span>375 x 812 PX</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>        
+                                                    <a href="428|brk|926|brk|Apple iPhone 12 Pro Max">Apple iPhone 12 Pro Max
+                                                        <span>428 x 926 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>        
+                                                    <a href="390|brk|844|brk|Apple iPhone 12 Pro">Apple iPhone 12 Pro
+                                                        <span>390 x 844 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>        
+                                                    <a href="360|brk|780|brk|Apple iPhone 12 Mini">Apple iPhone 12 Mini
+                                                        <span>360 x 780 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>        
+                                                    <a href="414|brk|896|brk|Apple iPhone 11 Pro Max">Apple iPhone 11 Pro Max
+                                                        <span>414 x 896 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="375|brk|812|brk|Apple iPhone 11 Pro">Apple iPhone 11 Pro
+                                                        <span>375 x 812 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="276|brk|598|brk|Apple iPhone 11">Apple iPhone 11
+                                                        <span>276 x 598 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="414|brk|736|brk|Apple iPhone 8 Plus">Apple iPhone 8 Plus
+                                                        <span>414 x 736 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="375|brk|667|brk|Apple iPhone 8">Apple iPhone 8
+                                                        <span>375 x 667 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="414|brk|736|brk|Apple iPhone 6s Plus/7 Plus">iPhone 6s Plus/7 Plus
+                                                        <span>414x736 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="375|brk|667|brk|Apple iPhone 6/6s/7">Apple iPhone 6/6s/7
+                                                        <span>375 x 667 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|568|brk|Apple iPhone 5/5s">Apple iPhone 5/5s
+                                                        <span>320 x 568 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|480|brk|Apple iPhone 3/4/4s">Apple iPhone 3/4/4s
+                                                        <span>320 x 480 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|568|brk|Apple iPod Touch">Apple iPod Touch
+                                                        <span>320 x 568 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="411|brk|731|brk|Nexus 5X">Nexus 5X
+                                                        <span>411 x 731 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="411|brk|731|brk|Nexus 6P">Nexus 6P
+                                                        <span>411 x 731 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="534|brk|400|brk|Google Pixel C">Google Pixel C
+                                                        <span>534 x 400 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="411|brk|731|brk|Google Pixel">Google Pixel
+                                                        <span>411 x 731 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="411|brk|731|brk|Google Pixel XL">Google Pixel XL
+                                                        <span>411 x 731 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="411|brk|731|brk|Google Pixel 2">Google Pixel 2
+                                                        <span>411 x 731 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="411|brk|731|brk|Google Pixel 2 XL">Google Pixel 2 XL
+                                                        <span>411 x 731 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="480|brk|1067|brk|Samsung Galaxy S20 Ultra">Samsung Galaxy S20 Ultra
+                                                        <span>480 x 1067 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="800|brk|1280|brk|Samsung Nexus 10">Samsung Nexus 10
+                                                        <span>800 x 1280 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="480|brk|853|brk|Samsung Galaxy Note 5">Samsung Galaxy Note 5
+                                                        <span>480 x 853 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|740|brk|Samsung Galaxy S9+">Samsung Galaxy S9+
+                                                        <span>360 x 740 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|740|brk|Samsung Galaxy S9">Samsung Galaxy S9
+                                                        <span>360 x 740 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|740|brk|Samsung Galaxy S8+">Samsung Galaxy S8+
+                                                        <span>360 x 740 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|740|brk|Samsung Galaxy S8">Samsung Galaxy S8
+                                                        <span>360 x 740 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Samsung Galaxy S7 Edge">Samsung Galaxy S7 Edge
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Samsung Galaxy S7">Samsung Galaxy S7
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Samsung Galaxy S6">Samsung Galaxy S6
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Samsung Galaxy S5">Samsung Galaxy S5
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Samsung Galaxy S4">Samsung Galaxy S4
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Samsung Galaxy S4 mini">Samsung Galaxy S4 mini
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Samsung Galaxy S3">Samsung Galaxy S3
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|533|brk|Samsung Galaxy S3 mini">Samsung Galaxy S3 mini
+                                                        <span>320 x 533 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|533|brk|Samsung Galaxy S2">Samsung Galaxy S2
+                                                        <span>320 x 533 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|533|brk|Samsung Galaxy S">Samsung Galaxy S
+                                                        <span>320 x 533 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|600|brk|Samsung Galaxy Nexus">Samsung Galaxy Nexus
+                                                        <span>360 x 600 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|740|brk|Samsung Galaxy Note 8">Samsung Galaxy Note 8
+                                                        <span>360 x 740 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Samsung Galaxy Note 4">Samsung Galaxy Note 4
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Samsung Galaxy Note 3">Samsung Galaxy Note 3
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Samsung Galaxy Note 2">Samsung Galaxy Note 2
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="400|brk|640|brk|Samsung Galaxy Note">Samsung Galaxy Note
+                                                        <span>400 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="480|brk|853|brk|LG G5">LG G5
+                                                        <span>480 x 853 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|LG G4">LG G4
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|LG G3">LG G3
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="384|brk|640|brk|LG Optimus G">LG Optimus G
+                                                        <span>384 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|LG Nexus 5">LG Nexus 5
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="384|brk|640|brk|LG Nexus 4">LG Nexus 4
+                                                        <span>384 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Pantech Vega n6">Pantech Vega n6
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Lenovo K900">Lenovo K900
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="412|brk|690|brk|Motorola Nexus 6">Motorola Nexus 6
+                                                        <span>412 x 690 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="412|brk|919|brk|OnePlus 9 Pro">OnePlus 9 Pro
+                                                        <span>412 x 919 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="412|brk|915|brk|OnePlus 9">OnePlus 9
+                                                        <span>412 x 915 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="412|brk|914|brk|OnePlus 8T">OnePlus 8T
+                                                        <span>412 x 914 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="412|brk|906|brk|OnePlus 8 Pro">OnePlus 8 Pro
+                                                        <span>412 x 906 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="412|brk|892|brk|OnePlus 7 Pro">OnePlus 7 Pro
+                                                        <span>412 x 892 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="412|brk|892|brk|OnePlus 7">OnePlus 7
+                                                        <span>412 x 892 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="480|brk|853|brk|One Plus 3">One Plus 3
+                                                        <span>480 x 853 PX</span>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="600|brk|960|brk|Nexus 7 (2013)">Nexus 7 (2013)
+                                                        <span>600 x 960 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="768|brk|1024|brk|Nexus 9">Nexus 9
+                                                        <span>768 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|ZTE Grand S">ZTE Grand S
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|480|brk|ZTE Open (Firefox OS)">ZTE Open (Firefox OS)
+                                                        <span>320 x 480 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|HTC One">HTC One
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|480|brk|HTC 8X">HTC 8X
+                                                        <span>320 x 480 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|HTC Evo 3D">HTC Evo 3D
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|598|brk|Sony Xperia Z3">Sony Xperia Z3
+                                                        <span>360 x 598 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Sony Xperia Z">Sony Xperia Z
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Sony Xperia S">Sony Xperia S
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Sony Xperia P">Sony Xperia P
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="393|brk|873|brk|Xiaomi Mi 10T Pro">Xiaomi Mi 10T Pro
+                                                        <span>393 x 873 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="393|brk|851|brk|Xiaomi Mi 10 5G">Xiaomi Mi 10 5G
+                                                        <span>393 x 851 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="393|brk|851|brk|Xiaomi Mi Note 10">Xiaomi Mi Note 10
+                                                        <span>393 x 851 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|780|brk|Xiaomi Redmi Note 9">Xiaomi Redmi Note 9
+                                                        <span>360 x 780 PX</span>
+                                                    </a>
+                                                </li>
+                                            
+                                                <li>
+                                                    <a href="360|brk|780|brk|Xiaomi Redmi Note 8 Pro">Xiaomi Redmi Note 8 Pro
+                                                        <span>360 x 780 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|780|brk|Xiaomi Redmi Note 7">Xiaomi Redmi Note 7
+                                                        <span>360 x 780 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="393|brk|786|brk|Xiaomi Redmi Note 5">Xiaomi Redmi Note 5
+                                                        <span>393 x 786 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Xiaomi Mi 4">Xiaomi Mi 4
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Xiaomi Mi 3">Xiaomi Mi 3
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="390|brk|695|brk|Blackberry Leap">Blackberry Leap
+                                                        <span>390 x 695 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="504|brk|504|brk|Blackberry Passport">Blackberry Passport
+                                                        <span>504 x 504 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="390|brk|390|brk|Blackberry Classic">Blackberry Classic
+                                                        <span>390 x 390 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="346|brk|346|brk|Blackberry Q10">Blackberry Q10
+                                                        <span>346 x 346 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|640|brk|Blackberry Z30">Blackberry Z30
+                                                        <span>360 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="384|brk|640|brk|Blackberry Z10">Blackberry Z10
+                                                        <span>384 x 640 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="360|brk|480|brk|Blackberry Torch 9800">Blackberry Torch 9800
+                                                        <span>360 x 480 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="432|brk|768|brk|Microsoft Lumia 1520">Microsoft Lumia 1520
+                                                        <span>432 x 768 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|480|brk|Microsoft Lumia 1020">Microsoft Lumia 1020
+                                                        <span>320 x 480 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|480|brk|Microsoft Lumia 925">Microsoft Lumia 925
+                                                        <span>320 x 480 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|480|brk|Microsoft Lumia 920">Microsoft Lumia 920
+                                                        <span>320 x 480 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|480|brk|Microsoft Lumia 900">Microsoft Lumia 900
+                                                        <span>320 x 480 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|480|brk|Microsoft Lumia 830">Microsoft Lumia 830
+                                                        <span>320 x 480 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="320|brk|480|brk|Microsoft Lumia 620">Microsoft Lumia 620
+                                                        <span>320 x 480 PX</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/#" class="responsive_top_menu" style="background-color:#af621e;">
+                                                <img src="/check_website_responsiveness/static/src/images/tab_icon.png" alt=""/>
+                                            </a>
+                                            <span class="tool">Tablet </span>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="1024|brk|1366|brk|Tablet/iPad Breakpoint 1024px">Breakpoint 1024px
+                                                        <span>1024 x 1366 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="991|brk|1280|brk|Tablet/iPad Breakpoint 991px">Breakpoint 991px
+                                                        <span>991 x 1280 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="768|brk|1024|brk|Tablet/iPad Breakpoint 768px">Breakpoint 768px
+                                                        <span>768 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="600|brk|1024|brk|Tablet/iPad Breakpoint 600px">Breakpoint 600px
+                                                        <span>600 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1024|brk|1366|brk|Apple iPad Pro">Apple iPad Pro
+                                                        <span>1024 x 1366 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="768|brk|1024|brk|Apple iPad Pro 9.7">Apple iPad Pro 9.7
+                                                        <span>768 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="768|brk|1024|brk|Apple iPad 3, 4, Air, Air2">Apple iPad 3, 4, Air, Air2
+                                                        <span>768 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="768|brk|1024|brk|Apple iPad 1, 2">Apple iPad 1, 2
+                                                        <span>768 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="768|brk|1024|brk|Apple iPad mini">Apple iPad mini
+                                                        <span>768 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="800|brk|1280|brk|Samsung Galaxy Tab 3 10%22">Samsung Galaxy Tab 3 10"
+                                                        <span>800 x 1280 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="800|brk|1280|brk|Samsung Galaxy Tab 2 10%22">Samsung Galaxy Tab 2 10"
+                                                        <span>800 x 1280 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="800|brk|1280|brk|Samsung Galaxy Tab (8.9%22)">Samsung Galaxy Tab (8.9")
+                                                        <span>800 x 1280 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="600|brk|1024|brk|Samsung Galaxy Tab 2 (7%22)">Samsung Galaxy Tab 2 (7")
+                                                        <span>600 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="800|brk|1280|brk|Samsung Nexus 10">Samsung Nexus 10
+                                                        <span>800 x 1280 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="768|brk|1024|brk|HTC Nexus 9">HTC Nexus 9
+                                                        <span>768 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="600|brk|960|brk|Asus Nexus 7 (v2)">Asus Nexus 7 (v2)
+                                                        <span>600 x 960 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="604|brk|966|brk|Asus Nexus 7 (v1)">Asus Nexus 7 (v1)
+                                                        <span>604 x 966 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="600|brk|960|brk|LG G Pad 8.3">LG G Pad 8.3
+                                                        <span>600 x 960 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="800|brk|1280|brk|Amazon Kindle Fire HD 8.9">Amazon Kindle Fire HD 8.9
+                                                        <span>800 x 1280 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="480|brk|800|brk|Amazon Kindle Fire HD 7">Amazon Kindle Fire HD 7
+                                                        <span>480 x 800 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="600|brk|1024|brk|Amazon Kindle Fire">Amazon Kindle Fire
+                                                        <span>600 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1000|brk|667|brk|Microsoft Surface Book">Microsoft Surface Book
+                                                        <span>1000 x 667 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="608|brk|912|brk|Microsoft Surface Pro 4">Microsoft Surface Pro 4
+                                                        <span>608 x 912 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1024|brk|1440|brk|Microsoft Surface Pro 3">Microsoft Surface Pro 3
+                                                        <span>1024 x 1440 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="720|brk|1280|brk|Microsoft Surface Pro 2">Microsoft Surface Pro 2
+                                                        <span>720 x 1280 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="720|brk|1280|brk|Microsoft Surface Pro">Microsoft Surface Pro
+                                                        <span>720 x 1280 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="768|brk|1366|brk|Microsoft Surface">Microsoft Surface
+                                                        <span>768 x 1366 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="600|brk|1024|brk|Blackberry Playbook">Blackberry Playbook
+                                                        <span>600 x 1024 PX</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1600|brk|2560|brk|Tablet">1600 x 2560
+                                                        <span>Google Nexus</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/#" class="responsive_top_menu" style="background-color:#9e5719;">
+                                                <img src="/check_website_responsiveness/static/src/images/monitor_icon.png" alt=""/>
+                                            </a>
+                                            <span
+                                                class="tool">Desktop
+                                            </span>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="1024|brk|600|brk|Desktop/Laptop">1024 x 600
+                                                        <span>10.0 inch Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1024|brk|768|brk|Desktop/Laptop">1024 x 768
+                                                        <span>12.1 inch Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1280|brk|800|brk|Desktop/Laptop">1280 x 800
+                                                        <span>13.3 inch Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1366|brk|768|brk|Desktop/Laptop">1366 x 768
+                                                        <span>15.6 inch Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1440|brk|900|brk|Desktop/Laptop">1440 x 900
+                                                        <span>19.0 inch Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1680|brk|1050|brk|Desktop/Laptop">1680 x 1050
+                                                        <span>20.0-22.0 inch Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1920|brk|1080|brk|Desktop/Laptop">1920 x 1080
+                                                        <span>23.8 inch Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1920|brk|1200|brk|Desktop/Laptop">1920 x 1200
+                                                        <span>24.0 inch Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="2560|brk|1440|brk|Desktop/Laptop">2560 x 1440
+                                                        <span>27.0 inch Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="3840|brk|2160|brk|Desktop/Laptop">3840 x 2160
+                                                        <span>28.0 inch Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="4096|brk|2304|brk|Desktop/Laptop">4096 x 2304
+                                                        <span>21.0 inch 4k Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="5120|brk|2880|brk|Desktop/Laptop">5120 x 2880
+                                                        <span>27.0 inch 5k Desktop/Laptop</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/#" class="responsive_top_menu" style="background-color:#773c08;">
+                                                <img src="/check_website_responsiveness/static/src/images/tv_icon.png" alt=""/>
+                                            </a>
+                                            <span
+                                                class="tool">Television
+                                            </span>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="640|brk|480|brk|480p Television">640 x 480
+                                                        <span>480p Television</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="720|brk|576|brk|576p Television">720 x 576
+                                                        <span>576p Television</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1280|brk|720|brk|720p Television">1280 x 720
+                                                        <span>720p Television</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="1920|brk|1080|brk|1080p Television">1920 x 1080
+                                                        <span>1080p
+                                                            Television</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="3840|brk|2160|brk|4K Television">3840 x 2160
+                                                        <span>4K Television</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="7680|brk|4320|brk|8K Television">7680 x 4320
+                                                        <span>8K Television</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/#" class="top_menu_custom" style="background-color:#582c05;">
+                                                <img src="/check_website_responsiveness/static/src/images/custom_icon.png" alt=""/>
+                                                <span class="tool">Custom Screen Size </span>
+                                            </a>
+                                            <ul class="custom-menu">
+                                                <li>
+                                                    <input type="text" id="custom_screen_width"/>
+                                                    <span class="custom-screenx">x</span>
+                                                    <input type="text" id="custom_screen_height"/>
+                                                    <input type="button" value="go" id="custom_screen_go"/>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="no_img" href="/#" id="screen_rotater" style="background-color:#462305;">
+                                                <img src="/check_website_responsiveness/static/src/images/rotate_icon.png" alt=""/>
+                                            </a>
+                                            <span class="tool">Portrait ↔️ Landscape Mode</span>
+                                        </li>
+                                        <li>
+                                            <a class="no_img" href="/#" id="screen_scrolling" style="background-color:#2b1502;">
+                                                <img id="screen_scrolling_yes" style="display:block;" src="/check_website_responsiveness/static/src/images/scroll_on_icon.png" alt="scroll_on"/>
+                                                <img id="screen_scrolling_no" style="display:none;" src="/check_website_responsiveness/static/src/images/scroll_off_icon.png" alt="scroll_off"/>
+                                            </a>
+                                            <span class="tool">Enable/Disable Scrolling </span>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <fieldset style="display:none;">
+                                    <input type="hidden" name="screencheck_width" id="screencheck_width" value="1024"/>
+                                    <input type="hidden" name="screencheck_height" id="screencheck_height" value="600"/>
+                                    <input type="hidden" name="screencheck_type" id="screencheck_type" value="Desktop"/>
+                                    <input type="hidden" name="screencheck_scrolling" id="screencheck_scrolling" value="yes"/>
+                                    <!-- <t t-set="base_url" t-value="request.env['ir.config_parameter'].sudo().search([('key','=','web.base.url')]).value"/> -->
+                                    <input type="text" value="#" name="screencheck_url" id="screencheck_url"/>
+                                    <input name="" class="url_check" type="submit" value="check"/>
+                                </fieldset>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">&amp;times;</button>
+                            </div>
+                            <main class="modal-body">
+                                <div class="wraper">
+                                    <aside class="left_wraper" style="min-height: 559px;">
+                                    </aside>
+                                    <div class="contentoutercon" style="min-width: 1192px;">
+                                        <section class="container_ah" style="min-height: 501px;">
+                                            <article class="row">
+                                                <div class="resolution">
+                                                    <h2 id="scereenwidth">1024 x 600 [ Desktop ] </h2>
+                                                    <span class="reload">
+                                                        <a href="/#" id="screen_refresh">
+                                                            <img title="Refresh Page" src="/check_website_responsiveness/static/src/images/refresh.png" alt=""/>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                                <iframe scrolling="yes" id="screen_frame" src="#" width="1024"
+                                                    height="600" style="background-image: none; background-color:#FFFFFF;" frameborder="0">
+                                                </iframe>
+                                            </article>
+                                        </section>
+                                    </div>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
